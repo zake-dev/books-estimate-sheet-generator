@@ -6,14 +6,13 @@ const RESOURCES = {
   "assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
 "assets/FontManifest.json": "01700ba55b08a6141f33e168c4a6c22f",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
-"assets/NOTICES": "53597e0b7f3e4bbe237939e3a037493c",
+"assets/NOTICES": "a39a09983b94b624229f4042f4b6624c",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
-"icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "e28ffe209ebb363459d4c8c30fc0678f",
-"/": "e28ffe209ebb363459d4c8c30fc0678f",
-"main.dart.js": "3c7b64550d0aa2373b01da73674416ea",
+"favicon.png": "18bee582e167b7b831877c3760f06386",
+"icons/book-icon.png": "73884229e34c3e21a0d4951319145851",
+"index.html": "7f32b97058d7204dbd2a07c9b26bfd9b",
+"/": "7f32b97058d7204dbd2a07c9b26bfd9b",
+"main.dart.js": "6fbf5a2b57d3578c4720e2c5196aab94",
 "manifest.json": "b48fe5399e4885f5ee98a422a17cb686"
 };
 
