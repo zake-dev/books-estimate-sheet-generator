@@ -9,6 +9,7 @@ import 'package:books_proposal_generator/constants.dart' as Constant;
 void main() async {
   // Load .env file
   await DotEnv().load('.env');
+
   runApp(App());
 }
 
