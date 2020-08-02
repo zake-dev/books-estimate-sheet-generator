@@ -1,12 +1,9 @@
 import 'dart:convert';
 
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
+import 'package:books_proposal_generator/constants.dart' as Constant;
 import 'package:books_proposal_generator/models/book.dart';
-
-final restApiKey = DotEnv().env['KAKAO_API_KEY'];
-final apiUrl = DotEnv().env['KAKAO_API_BOOK_SEARCH_URL'];
 
 Future<List<Book>> fetchBooks({String query}) async {
   final String target = 'title';
@@ -14,10 +11,10 @@ Future<List<Book>> fetchBooks({String query}) async {
   final int size = 5;
 
   final fullApiUrl =
-      '${apiUrl}target=$target&page=$page&size=$size&query=$query';
+      '${Constant.kakaoBookSearchURL}target=$target&page=$page&size=$size&query=$query';
 
-  final response =
-      await http.get(fullApiUrl, headers: {'Authorization': restApiKey});
+  final response = await http
+      .get(fullApiUrl, headers: {'Authorization': Constant.kakaoApiKey});
 
   if (response.statusCode == 200) {
     List<Book> books = new List<Book>();
