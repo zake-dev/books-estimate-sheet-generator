@@ -8,7 +8,7 @@ import 'package:books_proposal_generator/models/book.dart';
 Future<List<Book>> fetchBooks({String query}) async {
   final String target = 'title';
   final int page = 1;
-  final int size = 5;
+  final int size = 10;
 
   final fullApiUrl =
       '${Constant.kakaoBookSearchURL}target=$target&page=$page&size=$size&query=$query';

@@ -22,7 +22,8 @@ class BookSearch extends StatelessWidget {
           ),
           FloatingActionButton(
             child: Text('뒤로', style: Constant.headingTextStyle),
-            onPressed: () => Navigator.of(context).pop(),
+            onPressed: () =>
+                Navigator.of(context).pushReplacementNamed(Constant.homeRoute),
           )
         ],
       ),

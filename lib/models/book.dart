@@ -1,6 +1,5 @@
 class Book {
   final List<dynamic> authors;
-  final String contents;
   final String datetime;
   final String isbn;
   final int price;
@@ -11,7 +10,6 @@ class Book {
 
   Book(
       {this.authors,
-      this.contents,
       this.datetime,
       this.isbn,
       this.price,
@@ -23,8 +21,7 @@ class Book {
   factory Book.fromJson(dynamic json) {
     return Book(
       authors: json['authors'] as List<dynamic>,
-      contents: json['contents'] as String,
-      datetime: (json['datetime'] as String).substring(0, 11),
+      datetime: (json['datetime'] as String).substring(0, 10),
       isbn: json['isbn'] as String,
       price: json['price'] as int,
       publisher: json['publisher'] as String,

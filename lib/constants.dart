@@ -20,10 +20,11 @@ const headingTextStyle = TextStyle(
   fontSize: 16,
   fontWeight: FontWeight.bold,
 );
-const subHeadingTextSTyle = TextStyle(
-  fontSize: 14,
+const captionTextStyle = TextStyle(
+  fontSize: 12,
   fontWeight: FontWeight.normal,
   fontStyle: FontStyle.italic,
+  color: Color(0xFFBBBBBB),
 );
 const contentsTextStyle = TextStyle(
   fontSize: 14,
@@ -32,3 +33,8 @@ const contentsTextStyle = TextStyle(
 
 // Colors
 const primaryColor = Color(0xFF3F51B5);
+const greyBackgroundColor = Color(0xFFEEEEEE);
+const statusGreenColor = Color(0xFF4CAF50);
+const statusYellowColor = Color(0xFFFDD835);
+const statusRedColor = Color(0xFFD32F2F);
+const statusGreyColor = Color(0xFFCCCCCC);

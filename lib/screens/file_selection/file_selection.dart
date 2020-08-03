@@ -31,7 +31,7 @@ class FileSelection extends StatelessWidget {
               margin: EdgeInsets.all(8),
               child: FloatingActionButton(
                 child: Text('검색', style: Constant.headingTextStyle),
-                onPressed: () => Navigator.of(context).pushNamed(
+                onPressed: () => Navigator.of(context).pushReplacementNamed(
                     Constant.searchRoute,
                     arguments: _queryCubit.state),
               ),
