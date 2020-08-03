@@ -12,7 +12,7 @@ const RESOURCES = {
 "icons/book-icon.png": "73884229e34c3e21a0d4951319145851",
 "index.html": "7f32b97058d7204dbd2a07c9b26bfd9b",
 "/": "7f32b97058d7204dbd2a07c9b26bfd9b",
-"main.dart.js": "935fcfa4d31a5b7817800862793d34e3",
+"main.dart.js": "38aac6dbc82ad4a1a8ba65fc3db89235",
 "manifest.json": "3fe512af2b52fabc110bb68a4dfda716"
 };
 
