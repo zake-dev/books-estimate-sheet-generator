@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:books_proposal_generator/constants.dart' as Constant;
 import 'package:books_proposal_generator/models/book.dart';
 
 import 'book_search_card_contents.dart';

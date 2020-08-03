@@ -18,6 +18,7 @@ class FileSelection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
+              width: MediaQuery.of(context).size.width * 0.9,
               constraints: BoxConstraints(maxWidth: 400),
               child: TextField(
                 decoration: InputDecoration(

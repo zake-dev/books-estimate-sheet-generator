@@ -34,6 +34,7 @@ const contentsTextStyle = TextStyle(
 // Colors
 const primaryColor = Color(0xFF3F51B5);
 const greyBackgroundColor = Color(0xFFEEEEEE);
+const greyShadowColor = Color(0xFFCCCCCC);
 const statusGreenColor = Color(0xFF4CAF50);
 const statusYellowColor = Color(0xFFFDD835);
 const statusRedColor = Color(0xFFD32F2F);
