@@ -5,5 +5,5 @@
     "display": "standalone",
     "description": "A new Flutter project.",
     "orientation": "portrait-primary",
-    "prefer_related_applications": false,
+    "prefer_related_applications": false
 }
