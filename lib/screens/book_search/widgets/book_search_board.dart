@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:books_proposal_generator/constants.dart' as Constant;
 import 'package:books_proposal_generator/models/book.dart';
-import 'package:books_proposal_generator/models/book_queries.dart';
+import 'package:books_proposal_generator/providers/book_search_api_provider.dart';
 
-import './book_search_card_wrapper.dart';
+import 'book_search_card/book_search_card_wrapper.dart';
 
 class BookSearchBoard extends StatelessWidget {
   final String title;
@@ -14,7 +14,7 @@ class BookSearchBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: fetchBooks(query: title),
+      future: BookSearchApiProvider().fetchSearchResultByTitle(title),
       builder: (context, snapshot) {
         final List<Book> books = snapshot.data;
 

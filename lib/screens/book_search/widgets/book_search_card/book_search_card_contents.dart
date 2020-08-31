@@ -1,10 +1,8 @@
-import 'package:intl/intl.dart';
-
 import 'package:flutter/material.dart';
 
 import 'package:books_proposal_generator/constants.dart' as Constant;
 import 'package:books_proposal_generator/models/book.dart';
-import 'package:books_proposal_generator/screens/book_search/widgets/book_status_tag.dart';
+import './book_status_tag.dart';
 
 class BookSearchCardContents extends StatelessWidget {
   final Book book;
@@ -22,10 +20,11 @@ class BookSearchCardContents extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Padding(
+              Container(
+                height: 180,
                 padding: const EdgeInsets.all(8.0),
                 child: FadeInImage.assetNetwork(
-                  placeholder: 'images/book-thumbnail-placeholder.png',
+                  placeholder: 'images/no_image.gif',
                   image: book.thumbnailUrl,
                 ),
               ),
@@ -59,7 +58,7 @@ class BookSearchCardContents extends StatelessWidget {
             children: [
               BookStatusTag(status: book.status),
               Text(
-                _formattedPrice(book.price),
+                book.formattedPrice,
                 style: Constant.contentsTextStyle
                     .copyWith(fontWeight: FontWeight.bold),
               ),
@@ -68,10 +67,5 @@ class BookSearchCardContents extends StatelessWidget {
         ),
       ],
     );
-  }
-
-  String _formattedPrice(int price) {
-    final formatter = new NumberFormat('#,###');
-    return '${formatter.format(price)}원';
   }
 }
