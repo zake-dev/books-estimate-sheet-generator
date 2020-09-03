@@ -1,9 +1,0 @@
-{
-    "name": "books_proposal_generator",
-    "short_name": "books_proposal_generator",
-    "start_url": ".",
-    "display": "standalone",
-    "description": "A new Flutter project.",
-    "orientation": "portrait-primary",
-    "prefer_related_applications": false
-}
