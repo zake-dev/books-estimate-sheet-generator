@@ -1,11 +1,13 @@
 {
-  "name": "books_proposal_generator",
+  "name": "books-estimate-sheet-generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,9 +19,10 @@
   "bugs": {
     "url": "https://github.com/zake-dev/books-proposal-generator/issues"
   },
-  "homepage": "https://github.com/zake-dev/books-proposal-generator#readme",
+  "homepage": "https://zake-dev.github.io/books-proposal-generator",
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.4.1",
     "typescript": "^4.0.2",
     "webpack": "^4.44.1",
