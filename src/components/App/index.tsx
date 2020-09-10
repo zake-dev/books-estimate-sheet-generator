@@ -1,18 +1,13 @@
 import * as React from "react";
-import { CssBaseline, AppBar, Toolbar, Typography } from "@material-ui/core";
-import FileSelectionRoute from "components/FileSelectionRoute";
+import { ThemeProvider } from "styled-components";
+import { theme } from "styles/theme";
+import FileSelectionPage from "components/FileSelectionPage";
 
 const App: React.FC = () => {
   return (
-    <>
-      <CssBaseline />
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6">도서견적서 작성도우미</Typography>
-        </Toolbar>
-      </AppBar>
-      <FileSelectionRoute />
-    </>
+    <ThemeProvider theme={theme}>
+      <FileSelectionPage />
+    </ThemeProvider>
   );
 };
 
