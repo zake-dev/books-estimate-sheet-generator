@@ -1,14 +1,21 @@
 import * as React from "react";
-import { TextField, Button } from "@material-ui/core";
 import MainAppBar from "components/MainAppBar";
+import {
+  FileSelectionPageContainer,
+  FileSelectionBox,
+  StyledButton,
+} from "./style";
+import FilePathLabel from "./FilePathLabel";
 
 const FileSelectionPage: React.FC = () => {
   return (
-    <>
+    <FileSelectionPageContainer>
       <MainAppBar />
-      <TextField label="Excel 파일.." />
-      <Button>불러오기</Button>
-    </>
+      <FileSelectionBox>
+        <FilePathLabel />
+        <StyledButton>검색</StyledButton>
+      </FileSelectionBox>
+    </FileSelectionPageContainer>
   );
 };
 

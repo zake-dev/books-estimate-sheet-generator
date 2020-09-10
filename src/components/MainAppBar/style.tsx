@@ -4,6 +4,8 @@ import { AppBar } from "@material-ui/core";
 const StyledAppBar = styled(AppBar)`
   && {
     position: static;
+
+    width: 100vw;
   }
 `;
 
