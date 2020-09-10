@@ -24,11 +24,11 @@ export const FileSelectionBox = styled.div`
 
 export const StyledButton = styled(Button)`
   && {
-    padding: 8px 8px;
+    padding: 8px 16px;
 
     border-radius: 30px;
     background-color: ${(props) => props.theme.color.main};
-    color: #ffffff;
+    color: ${(props) => props.theme.color.white};
   }
 
   &:hover {

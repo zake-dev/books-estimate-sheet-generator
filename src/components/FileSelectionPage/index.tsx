@@ -5,15 +5,15 @@ import {
   FileSelectionBox,
   StyledButton,
 } from "./style";
-import FilePathLabel from "./FilePathLabel";
+import FileSelectionTextField from "./FileSelectionTextField";
 
 const FileSelectionPage: React.FC = () => {
   return (
     <FileSelectionPageContainer>
       <MainAppBar />
       <FileSelectionBox>
-        <FilePathLabel />
-        <StyledButton>검색</StyledButton>
+        <FileSelectionTextField />
+        <StyledButton>도서검색</StyledButton>
       </FileSelectionBox>
     </FileSelectionPageContainer>
   );
