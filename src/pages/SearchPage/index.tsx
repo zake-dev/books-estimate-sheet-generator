@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Typography } from "@material-ui/core";
-import { RouteComponentProps, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export const SearchPage: React.FC = () => {
   const location = useLocation();
