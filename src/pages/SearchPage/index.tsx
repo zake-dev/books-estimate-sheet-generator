@@ -3,6 +3,7 @@ import { Typography } from "@material-ui/core";
 import { useLocation } from "react-router-dom";
 import MainAppBar from "components/MainAppBar";
 import { PageWrapper, ContentWrapper } from "components/Wrappers";
+import { BookSelectionBoard } from "./styles";
 
 export const SearchPage: React.FC = () => {
   const location = useLocation();
@@ -12,7 +13,9 @@ export const SearchPage: React.FC = () => {
     <PageWrapper>
       <MainAppBar />
       <ContentWrapper>
-        <Typography variant="h6">{titles}</Typography>
+        <BookSelectionBoard elevation={0}>
+          <Typography variant="h6">테스트</Typography>
+        </BookSelectionBoard>
       </ContentWrapper>
     </PageWrapper>
   );
