@@ -13,7 +13,8 @@
     "paths": {
       "components/*": ["src/components/*"],
       "styles/*": ["src/styles/*"],
-      "services/*": ["src/services/*"]
+      "services/*": ["src/services/*"],
+      "services/": ["src/services"]
     }
   }
 }
