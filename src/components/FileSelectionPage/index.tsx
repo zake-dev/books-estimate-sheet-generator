@@ -37,14 +37,14 @@ const FileSelectionPage: React.FC = () => {
       <MainAppBar />
       <FileSelectionBox>
         <FileSelectionInput
-          fileName={file ? file.name : "Excel 파일을 불러와주세요..."}
+          fileName={file ? file.name : "Excel 파일 업로드..."}
           handleFile={handleFile}
         />
         <StyledButton onClick={handleClick}>도서검색</StyledButton>
       </FileSelectionBox>
       <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="error">
-          Excel파일을 업로드해주세요!
+          Excel 파일을 업로드해주세요!
         </Alert>
       </Snackbar>
     </FileSelectionPageContainer>
