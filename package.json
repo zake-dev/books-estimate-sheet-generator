@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "webpack-dev-server --mode production --open",
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
     "predeploy": "npm run build",
@@ -11,15 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zake-dev/books-proposal-generator.git"
+    "url": "git+https://github.com/zake-dev/books-estimate-sheet-generator.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zake-dev/books-proposal-generator/issues"
-  },
-  "homepage": "https://zake-dev.github.io/books-proposal-generator",
+  "homepage": ".",
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/material-ui": "^0.21.8",
