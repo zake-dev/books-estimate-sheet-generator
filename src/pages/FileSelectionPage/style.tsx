@@ -1,17 +1,17 @@
 import styled from "styled-components";
 import { Button } from "@material-ui/core";
 
-export const FileSelectionPageContainer = styled.div`
+export const PageContainer = styled.div`
   && {
     display: flex;
     flex-direction: column;
 
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 60px);
   }
 `;
 
-export const FileSelectionBox = styled.div`
+export const ContentWrapper = styled.div`
   && {
     flex: 1;
 
