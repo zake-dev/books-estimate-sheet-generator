@@ -18,13 +18,13 @@ const FileSelectionPage: React.FC = () => {
     setFile(fileUploaded);
   };
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+  const handleClick = async (event: React.MouseEvent<HTMLElement>) => {
     /* Validation */
     const extension = file?.name.split(".")[1];
-    console.log(extension);
     if (!file || (extension !== "xls" && extension !== "xlsx")) {
       setOpen(true);
     }
+    /* Fetch book data */
   };
 
   const handleClose = (event?: React.SyntheticEvent, reason?: string) => {

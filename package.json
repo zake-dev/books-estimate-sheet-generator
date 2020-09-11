@@ -21,6 +21,7 @@
   },
   "homepage": "https://zake-dev.github.io/books-proposal-generator",
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/material-ui": "^0.21.8",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
@@ -39,6 +40,8 @@
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/lab": "^4.0.0-alpha.56",
+    "axios": "^0.20.0",
+    "dotenv-webpack": "^2.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",

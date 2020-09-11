@@ -12,7 +12,8 @@
     "baseUrl": "./",
     "paths": {
       "components/*": ["src/components/*"],
-      "styles/*": ["src/styles/*"]
+      "styles/*": ["src/styles/*"],
+      "services/*": ["src/services/*"]
     }
   }
 }
