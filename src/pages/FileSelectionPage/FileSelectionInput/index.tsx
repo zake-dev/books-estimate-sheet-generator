@@ -4,12 +4,12 @@ import { SearchOutlined } from "@material-ui/icons";
 import { StyledPaper } from "./style";
 import { ThemeContext } from "styled-components";
 
-type FileSelectionInputProps = {
+interface Props {
   fileName: string;
   handleFile: (fileUploaded) => void;
-};
+}
 
-const FileSelectionInput: React.FC<FileSelectionInputProps> = (props) => {
+const FileSelectionInput: React.FC<Props> = (props) => {
   const theme = React.useContext(ThemeContext);
   const hiddenFileInput = React.useRef(null);
 

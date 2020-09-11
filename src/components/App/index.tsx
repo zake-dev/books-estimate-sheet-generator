@@ -1,12 +1,12 @@
 import * as React from "react";
 import { ThemeProvider } from "styled-components";
 import { theme } from "styles/theme";
-import FileSelectionPage from "components/FileSelectionPage";
+import Router from "pages/Router";
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
-      <FileSelectionPage />
+      <Router />
     </ThemeProvider>
   );
 };

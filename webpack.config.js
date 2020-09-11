@@ -11,6 +11,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, "/dist"),
     filename: "bundle.min.js",
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -19,6 +20,9 @@ module.exports = {
         loader: "awesome-typescript-loader",
       },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({

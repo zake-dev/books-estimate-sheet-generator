@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Snackbar } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
+import { RouteComponentProps } from "react-router-dom";
 
 import MainAppBar from "components/MainAppBar";
 import {
@@ -11,7 +12,9 @@ import {
 import FileSelectionInput from "./FileSelectionInput";
 import { ExcelIO } from "services/";
 
-const FileSelectionPage: React.FC = () => {
+interface Props extends RouteComponentProps {}
+
+const FileSelectionPage: React.FC<Props> = ({ history }) => {
   const [file, setFile] = React.useState(null);
   const [open, setOpen] = React.useState(false);
   const [titles, setTitles] = React.useState(null);
@@ -30,7 +33,7 @@ const FileSelectionPage: React.FC = () => {
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     /* Fetch book data */
-    console.dir(titles);
+    history.push({ pathname: "/search", state: { titles: titles } });
   };
 
   const handleClose = (event?: React.SyntheticEvent, reason?: string) => {
