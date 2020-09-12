@@ -15,7 +15,8 @@
       "styles/*": ["src/styles/*"],
       "services/*": ["src/services/*"],
       "services/": ["src/services"],
-      "pages/*": ["src/pages/*"]
+      "pages/*": ["src/pages/*"],
+      "assets/*": ["src/assets/*"]
     }
   }
 }
