@@ -1,7 +1,7 @@
 export class Book {
   title: string;
   author: string;
-  datetime: Date;
+  datetime: string;
   isbn: string;
   price: number;
   publisher: string;
@@ -11,7 +11,7 @@ export class Book {
   constructor(
     title: string,
     author: string = "",
-    datetime: Date = null,
+    datetime: string = "",
     isbn: string = "",
     price: number = 0,
     publisher: string = "",
@@ -29,7 +29,9 @@ export class Book {
   }
 
   static fromJson(json): Book {
-    const datetime: Date = new Date(json.datetime);
+    const datetime: string = new Date(json.datetime)
+      .toISOString()
+      .substr(0, 10);
     const isbn: string = json.isbn
       .split(" ")
       .reduce((a: string, b: string) => (a.length > b.length ? a : b));
