@@ -4,7 +4,10 @@ import { Book } from "./Book";
 const HOST: string = "https://dapi.kakao.com";
 const AUTH_KEY: string = process.env.API_AUTH_KEY;
 
-export async function fetchBooksByTitle(title: string) {
+export async function fetchBooksByTitle(
+  title: string,
+  callback: (books: Book[]) => void
+) {
   /* API Settings */
   const pageLimit = 1;
   const size = 5;
@@ -17,7 +20,7 @@ export async function fetchBooksByTitle(title: string) {
     },
   });
   const documents = response.data.documents;
-  return documents.map((json) => Book.fromJson(json));
+  callback(documents.map((json) => Book.fromJson(json)));
 }
 
 export { Book } from "./Book";

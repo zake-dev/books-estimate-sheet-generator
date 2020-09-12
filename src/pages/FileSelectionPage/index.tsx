@@ -4,11 +4,8 @@ import Alert from "@material-ui/lab/Alert";
 import { RouteComponentProps } from "react-router-dom";
 
 import MainAppBar from "components/MainAppBar";
-import {
-  FileSelectionPageContainer,
-  FileSelectionBox,
-  StyledButton,
-} from "./style";
+import { PageWrapper, ContentWrapper } from "components/Wrappers";
+import { StyledButton } from "./style";
 import FileSelectionInput from "./FileSelectionInput";
 import { ExcelIO } from "services/";
 
@@ -42,9 +39,9 @@ const FileSelectionPage: React.FC<Props> = ({ history }) => {
   };
 
   return (
-    <FileSelectionPageContainer>
+    <PageWrapper>
       <MainAppBar />
-      <FileSelectionBox>
+      <ContentWrapper>
         <FileSelectionInput
           fileName={file ? file.name : "Excel 파일 업로드..."}
           handleFile={handleFile}
@@ -52,14 +49,14 @@ const FileSelectionPage: React.FC<Props> = ({ history }) => {
         <StyledButton disabled={titles === null} onClick={handleClick}>
           도서검색
         </StyledButton>
-      </FileSelectionBox>
+      </ContentWrapper>
 
       <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="error">
           Excel 파일을 업로드해주세요!
         </Alert>
       </Snackbar>
-    </FileSelectionPageContainer>
+    </PageWrapper>
   );
 };
 

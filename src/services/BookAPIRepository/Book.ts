@@ -1,4 +1,5 @@
 export class Book {
+  title: string;
   author: string;
   datetime: Date;
   isbn: string;
@@ -8,14 +9,16 @@ export class Book {
   thumbnail: string;
 
   constructor(
-    author: string,
-    datetime: Date,
-    isbn: string,
-    price: number,
-    publisher: string,
-    status: string,
-    thumbnail: string
+    title: string,
+    author: string = "",
+    datetime: Date = null,
+    isbn: string = "",
+    price: number = 0,
+    publisher: string = "",
+    status: string = "",
+    thumbnail: string = "no-image"
   ) {
+    this.title = title;
     this.author = author;
     this.datetime = datetime;
     this.isbn = isbn;
@@ -34,6 +37,7 @@ export class Book {
       json.authors.length > 1 ? `${json.authors[0]} 외` : json.authors[0];
 
     return new Book(
+      json.title,
       author,
       datetime,
       isbn,
