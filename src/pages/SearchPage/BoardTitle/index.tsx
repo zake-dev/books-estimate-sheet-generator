@@ -2,15 +2,17 @@ import * as React from "react";
 import { TitleWrapper, Title } from "./styles";
 
 interface Props {
-  current: number;
-  max: number;
+  title: string;
 }
 
 export const BoardTitle: React.FC<Props> = (props) => {
   return (
     <TitleWrapper>
       <Title>
-        견적서에 포함할 도서를 선택해주세요 ({props.current}/{props.max})
+        검색 도서 -{" "}
+        {props.title.length > 25
+          ? `${props.title.substr(0, 22)}...`
+          : props.title}
       </Title>
     </TitleWrapper>
   );

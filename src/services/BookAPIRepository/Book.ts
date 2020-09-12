@@ -10,13 +10,13 @@ export class Book {
 
   constructor(
     title: string,
-    author: string,
-    datetime: Date,
-    isbn: string,
-    price: number,
-    publisher: string,
-    status: string,
-    thumbnail: string
+    author: string = "",
+    datetime: Date = null,
+    isbn: string = "",
+    price: number = 0,
+    publisher: string = "",
+    status: string = "",
+    thumbnail: string = "no-image"
   ) {
     this.title = title;
     this.author = author;

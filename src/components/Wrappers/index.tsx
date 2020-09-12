@@ -6,7 +6,7 @@ export const PageWrapper = styled.div`
     flex-direction: column;
 
     width: 100vw;
-    height: calc(100vh - 60px);
+    height: 100vh;
   }
 `;
 
