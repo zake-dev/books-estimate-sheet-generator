@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import MainAppBar from "components/MainAppBar";
 import { PageWrapper, ContentWrapper } from "components/Wrappers";
 import { Book } from "services/";
+import { Table } from "./Table";
 
 interface Props {}
 
@@ -15,9 +16,7 @@ export const DataTablePage: React.FC<Props> = (props) => {
     <PageWrapper>
       <MainAppBar />
       <ContentWrapper>
-        {books.map((book: Book) => (
-          <Typography>{book.title}</Typography>
-        ))}
+        <Table books={books} />
       </ContentWrapper>
     </PageWrapper>
   );
