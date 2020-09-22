@@ -33,6 +33,7 @@ export const Table: React.FC<Props> = (props) => {
     elevation: 0,
     filter: false,
     print: false,
+    download: false,
     viewColumns: false,
     filterType: "checkbox",
     responsive: "scrollMaxHeight",
