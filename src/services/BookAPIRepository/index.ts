@@ -11,8 +11,9 @@ export async function fetchBooksByTitle(
   /* API Settings */
   const pageLimit = 1;
   const size = 5;
+  const sort = "recency";
   const url: string = "/v3/search/book";
-  const parameter: string = `target=title&query=${title}&page=${pageLimit}&size=${size}`;
+  const parameter: string = `target=title&query=${title}&page=${pageLimit}&size=${size}&sort=${sort}`;
   /* Call API */
   const response = await axios.get(`${HOST}${url}?${parameter}`, {
     headers: {

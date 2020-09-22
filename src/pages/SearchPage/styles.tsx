@@ -6,7 +6,6 @@ export const BookSelectionBoard = styled(Paper)`
     height: 50vh;
     width: 80vw;
     min-height: 350px;
-    max-width: 650px;
 
     display: flex;
     justify-content: space-around;
