@@ -3,7 +3,7 @@ import { Button } from "@material-ui/core";
 
 export const StyledButton = styled(Button)`
   && {
-    margin-top: 16px;
+    margin: 16px 8px;
     padding: 8px 16px;
 
     border: ${(props) => (props.disabled ? "2px solid" : "none")};

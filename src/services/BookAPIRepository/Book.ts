@@ -49,4 +49,20 @@ export class Book {
       json.thumbnail
     );
   }
+
+  static getHeaders(): string[] {
+    return ["ISBN", "도서명", "저자", "출판사", "출판일", "판매상태", "정가"];
+  }
+
+  toArray(): any[] {
+    return [
+      this.isbn,
+      this.title,
+      this.author,
+      this.publisher,
+      this.datetime,
+      this.status,
+      this.price,
+    ];
+  }
 }
