@@ -47,7 +47,7 @@ export const BookCard: React.FC<Props> = (props) => {
             <Typography style={theme.textStyle.body}>
               {clippedText(
                 `${props.book.author} | ${props.book.publisher}`,
-                20
+                18
               )}
             </Typography>
             <Typography style={theme.textStyle.accent}>
