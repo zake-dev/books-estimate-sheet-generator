@@ -24,14 +24,23 @@ export const BottomNavigation: React.FC<Props> = (props) => {
     }
   };
 
-  const handleSelect = (event: React.MouseEvent<HTMLElement>) => {
-    /* Skip handle */
-    if (props.searchResult?.length === 0) {
-      props.setBooks([...props.books, new Book(props.titles[props.count - 1])]);
-      fetchNext();
-      return;
+  const handleSkip = (event: React.MouseEvent<HTMLElement>) => {
+    /* Handle last selection*/
+    if (props.count === props.max) {
+      props.history.push({
+        pathname: "/result",
+        state: {
+          books: [...props.books, new Book(props.titles[props.count - 1])],
+        },
+      });
     }
 
+    props.setBooks([...props.books, new Book(props.titles[props.count - 1])]);
+    fetchNext();
+    return;
+  };
+
+  const handleSelect = (event: React.MouseEvent<HTMLElement>) => {
     /* Find selected Book */
     let selectedBook: Book;
     for (let book of props.searchResult) {
@@ -60,11 +69,9 @@ export const BottomNavigation: React.FC<Props> = (props) => {
       <Instruction>
         견적서에 포함할 도서를 선택해주세요 ({props.count}/{props.max})
       </Instruction>
-      <StyledButton
-        disabled={props.selected === "" && props.searchResult?.length > 0}
-        onClick={handleSelect}
-      >
-        {props.searchResult?.length > 0 ? "선택하기" : "건너뛰기"}
+      <StyledButton onClick={handleSkip}>건너뛰기</StyledButton>
+      <StyledButton disabled={props.selected === ""} onClick={handleSelect}>
+        선택하기
       </StyledButton>
     </BottomNavBar>
   );

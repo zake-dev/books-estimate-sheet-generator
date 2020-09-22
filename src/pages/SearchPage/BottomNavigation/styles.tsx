@@ -7,7 +7,7 @@ export const BottomNavBar = styled.div`
     max-width: 650px;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 
     padding: 16px 0px;
@@ -16,6 +16,7 @@ export const BottomNavBar = styled.div`
 
 export const StyledButton = styled(Button)`
   && {
+    margin: 0px 0px 0px 8px;
     padding: 8px 16px;
 
     border: ${(props) => (props.disabled ? "2px solid" : "none")};
